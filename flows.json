@@ -9,6 +9,7 @@
         "type": "uibuilder",
         "z": "c79ee600.c17d18",
         "name": "",
+        "templatesById": {},
         "templates": {
             "dcfcf9e9.a01de8": {
                 "id": "dcfcf9e9.a01de8",
@@ -1158,8 +1159,8 @@
             "a55f0a82.8c4c28": "return `rotate(${sentiment/6 * 360})`"
         },
         "canvasdimensions": {
-            "w": 985.2631578947369,
-            "h": 572
+            "w": 534,
+            "h": 310.01666666666665
         },
         "tree": {
             "a55f0a82.8c4c28": {
