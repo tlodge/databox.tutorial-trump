@@ -1021,11 +1021,12 @@
         "z": "c79ee600.c17d18",
         "name": "",
         "subtype": "twitterHashTagStream",
-        "x": 513,
+        "x": 401,
         "y": 420,
         "wires": [
             [
-                "b62652f7.d3edf"
+                "1196d124.1f492f",
+                "2a94594a.6562d6"
             ]
         ]
     },
@@ -1039,5 +1040,48 @@
         "x": 921,
         "y": 415,
         "wires": []
+    },
+    {
+        "id": "1196d124.1f492f",
+        "type": "extract",
+        "z": "c79ee600.c17d18",
+        "name": "",
+        "filters": [
+            {
+                "source": "twitter",
+                "item": {
+                    "type": "string",
+                    "description": "a tweet",
+                    "name": "value"
+                },
+                "path": [
+                    "payload",
+                    "value"
+                ]
+            }
+        ],
+        "x": 571,
+        "y": 364,
+        "wires": [
+            [
+                "b62652f7.d3edf"
+            ]
+        ]
+    },
+    {
+        "id": "2a94594a.6562d6",
+        "type": "dbfunction",
+        "z": "c79ee600.c17d18",
+        "name": "",
+        "func": "return msg;",
+        "outputs": 1,
+        "inputtypedef": "",
+        "outputtypedef": "",
+        "noerr": 0,
+        "x": 571,
+        "y": 498,
+        "wires": [
+            []
+        ]
     }
 ]
