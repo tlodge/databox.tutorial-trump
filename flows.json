@@ -1129,10 +1129,30 @@
                     "type": "group",
                     "property": "rotate"
                 }
+            },
+            {
+                "mappingId": "3c523fc.722d0c",
+                "ttype": "transform",
+                "from": {
+                    "sourceId": "cbcd20a2.8a3ca",
+                    "key": "value",
+                    "path": [
+                        "payload"
+                    ],
+                    "type": "string"
+                },
+                "to": {
+                    "path": [
+                        "5bc568b8.58a078"
+                    ],
+                    "type": "group",
+                    "property": "rotate"
+                }
             }
         ],
         "transformers": {
-            "e3f37d9d.9503a": "console.log(\"sentiment\", sentiment);\nreturn `rotate(${sentiment%360})`"
+            "e3f37d9d.9503a": "console.log(\"sentiment\", sentiment);\nreturn `rotate(${sentiment%360})`",
+            "3c523fc.722d0c": "console.log(\"ok value is\", value);\nreturn `rotate(${value%360})`"
         },
         "canvasdimensions": {
             "w": 985.2631578947369,
@@ -1170,10 +1190,42 @@
                         ]
                     }
                 ]
+            },
+            "3c523fc.722d0c": {
+                "node": {
+                    "nid": "b62652f7.d3edf",
+                    "type": "uibuilder",
+                    "category": "processors",
+                    "color": "#002255",
+                    "unicode": "f03e"
+                },
+                "parents": [
+                    {
+                        "node": {
+                            "nid": "cbcd20a2.8a3ca",
+                            "type": "extract",
+                            "category": "processors",
+                            "color": "#002255",
+                            "unicode": "f0a6"
+                        },
+                        "parents": [
+                            {
+                                "node": {
+                                    "nid": "9a35d69d.adeb08",
+                                    "type": "twitter",
+                                    "category": "datastores",
+                                    "color": "#ffcc00",
+                                    "unicode": "f099"
+                                },
+                                "parents": []
+                            }
+                        ]
+                    }
+                ]
             }
         },
-        "x": 751,
-        "y": 452,
+        "x": 755,
+        "y": 505,
         "wires": [
             [
                 "3b8495a.c860f6a"
@@ -1190,7 +1242,8 @@
         "y": 420,
         "wires": [
             [
-                "2a94594a.6562d6"
+                "2a94594a.6562d6",
+                "cbcd20a2.8a3ca"
             ]
         ]
     },
@@ -1201,8 +1254,8 @@
         "name": "",
         "appId": "webapp",
         "layout": null,
-        "x": 925,
-        "y": 452,
+        "x": 901,
+        "y": 506,
         "wires": []
     },
     {
@@ -1235,5 +1288,32 @@
         "x": 754,
         "y": 340,
         "wires": []
+    },
+    {
+        "id": "cbcd20a2.8a3ca",
+        "type": "extract",
+        "z": "c79ee600.c17d18",
+        "name": "thetweet",
+        "filters": [
+            {
+                "source": "twitter",
+                "item": {
+                    "type": "string",
+                    "description": "a tweet",
+                    "name": "value"
+                },
+                "path": [
+                    "payload",
+                    "value"
+                ]
+            }
+        ],
+        "x": 585,
+        "y": 578,
+        "wires": [
+            [
+                "b62652f7.d3edf"
+            ]
+        ]
     }
 ]
