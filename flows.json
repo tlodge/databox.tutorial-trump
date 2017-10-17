@@ -1178,13 +1178,119 @@
             "ae9bfc19.b95b3",
             "734b47e5.3aa8f8"
         ],
-        "mappings": [],
-        "transformers": {},
+        "mappings": [
+            {
+                "mappingId": "65ac3b29.9bc394",
+                "ttype": "attribute",
+                "from": {
+                    "sourceId": "2a94594a.6562d6",
+                    "key": "tweet",
+                    "path": [
+                        "payload"
+                    ],
+                    "type": "string"
+                },
+                "to": {
+                    "path": [
+                        "bf9a30df.6abc5"
+                    ],
+                    "type": "text",
+                    "property": "text"
+                }
+            },
+            {
+                "mappingId": "3d3a39ba.9cc6b6",
+                "ttype": "transform",
+                "from": {
+                    "sourceId": "2a94594a.6562d6",
+                    "key": "sentiment",
+                    "path": [
+                        "payload"
+                    ],
+                    "type": "number"
+                },
+                "to": {
+                    "path": [
+                        "f9912491.dafba8"
+                    ],
+                    "type": "group",
+                    "property": "rotate"
+                }
+            }
+        ],
+        "transformers": {
+            "3d3a39ba.9cc6b6": "return `rotate(${sentiment/10*360})`"
+        },
         "canvasdimensions": {
             "w": 1348,
             "h": 782.5888888888888
         },
-        "tree": {},
+        "tree": {
+            "65ac3b29.9bc394": {
+                "node": {
+                    "nid": "83cdc5c2.5b13f8",
+                    "type": "uibuilder",
+                    "category": "processors",
+                    "color": "#002255",
+                    "unicode": "f03e"
+                },
+                "parents": [
+                    {
+                        "node": {
+                            "nid": "2a94594a.6562d6",
+                            "type": "dbfunction",
+                            "category": "processors",
+                            "color": "#002255",
+                            "unicode": "f121"
+                        },
+                        "parents": [
+                            {
+                                "node": {
+                                    "nid": "9a35d69d.adeb08",
+                                    "type": "twitter",
+                                    "category": "datastores",
+                                    "color": "#ffcc00",
+                                    "unicode": "f099"
+                                },
+                                "parents": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "3d3a39ba.9cc6b6": {
+                "node": {
+                    "nid": "83cdc5c2.5b13f8",
+                    "type": "uibuilder",
+                    "category": "processors",
+                    "color": "#002255",
+                    "unicode": "f03e"
+                },
+                "parents": [
+                    {
+                        "node": {
+                            "nid": "2a94594a.6562d6",
+                            "type": "dbfunction",
+                            "category": "processors",
+                            "color": "#002255",
+                            "unicode": "f121"
+                        },
+                        "parents": [
+                            {
+                                "node": {
+                                    "nid": "9a35d69d.adeb08",
+                                    "type": "twitter",
+                                    "category": "datastores",
+                                    "color": "#ffcc00",
+                                    "unicode": "f099"
+                                },
+                                "parents": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
         "x": 760,
         "y": 487,
         "wires": [
