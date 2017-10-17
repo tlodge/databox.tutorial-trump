@@ -1171,8 +1171,8 @@
             "79018062.5d533",
             "74915d2e.9a5fb4",
             "2f83a267.196a6e",
-            "f9912491.dafba8",
             "bf9a30df.6abc5",
+            "f9912491.dafba8",
             "3860dd27.bfa842",
             "222282b8.b7396e",
             "ae9bfc19.b95b3",
@@ -1216,10 +1216,30 @@
                     "type": "group",
                     "property": "rotate"
                 }
+            },
+            {
+                "mappingId": "d2035481.b7e228",
+                "ttype": "transform",
+                "from": {
+                    "sourceId": "2a94594a.6562d6",
+                    "key": "sentiment",
+                    "path": [
+                        "payload"
+                    ],
+                    "type": "number"
+                },
+                "to": {
+                    "path": [
+                        "222282b8.b7396e"
+                    ],
+                    "type": "group",
+                    "property": "rotate"
+                }
             }
         ],
         "transformers": {
-            "3d3a39ba.9cc6b6": "return `rotate(${sentiment/10*360})`"
+            "3d3a39ba.9cc6b6": "return `rotate(${sentiment/10*360})`",
+            "d2035481.b7e228": "return `rotate(${37-(sentiment/10*37)})`"
         },
         "canvasdimensions": {
             "w": 1348,
@@ -1259,6 +1279,38 @@
                 ]
             },
             "3d3a39ba.9cc6b6": {
+                "node": {
+                    "nid": "83cdc5c2.5b13f8",
+                    "type": "uibuilder",
+                    "category": "processors",
+                    "color": "#002255",
+                    "unicode": "f03e"
+                },
+                "parents": [
+                    {
+                        "node": {
+                            "nid": "2a94594a.6562d6",
+                            "type": "dbfunction",
+                            "category": "processors",
+                            "color": "#002255",
+                            "unicode": "f121"
+                        },
+                        "parents": [
+                            {
+                                "node": {
+                                    "nid": "9a35d69d.adeb08",
+                                    "type": "twitter",
+                                    "category": "datastores",
+                                    "color": "#ffcc00",
+                                    "unicode": "f099"
+                                },
+                                "parents": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "d2035481.b7e228": {
                 "node": {
                     "nid": "83cdc5c2.5b13f8",
                     "type": "uibuilder",
