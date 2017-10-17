@@ -34,7 +34,7 @@
         "type": "dbfunction",
         "z": "c79ee600.c17d18",
         "name": "tweet sentiment",
-        "func": "var sentiment = require(\"sentiment\");\nvar r = sentiment(msg.payload.value);\n\nreturn {\n    payload: {\n        tweet: msg.payload.value,\n        sentiment: r.score,\n    }\n}",
+        "func": "var sentiment = require(\"sentiment\");\nvar r = sentiment(msg.payload.value);\n//r.comparative is between -5 and 5\nconsole.log(r);\nreturn {\n    payload: {\n        tweet: msg.payload.value,\n        sentiment: r.score,\n    }\n}",
         "outputs": 1,
         "inputtypedef": "",
         "outputtypedef": "{\n    \"name\": \"container object\",\n    \"type\": \"object\",\n    \"properties\": {\n        \"payload\": {\n            \"type\": \"object\",\n            \"properties\":{\n                \"tweet\": {\"type\":\"string\"},\n                \"sentiment\": {\"type\": \"number\"}\n            }\n        }\n    }\n}",
