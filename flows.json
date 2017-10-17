@@ -70,8 +70,8 @@
                 "id": "79018062.5d533",
                 "label": "group:79018062.5d533",
                 "type": "group",
-                "x": -6,
-                "y": -13,
+                "x": -3.0018903591682147,
+                "y": -4.948960302457408,
                 "width": 1399.1300048828125,
                 "height": 840.5890502929688,
                 "children": [
@@ -447,9 +447,9 @@
                 "id": "3860dd27.bfa842",
                 "label": "circle:3860dd27.bfa842",
                 "type": "circle",
-                "cx": 689.4912860892388,
-                "cy": 346.7601224846894,
-                "r": 224,
+                "cx": 689.1001890359169,
+                "cy": 345.75803402646505,
+                "r": 220,
                 "style": {
                     "fill": "white",
                     "stroke": "#484848",
@@ -1040,8 +1040,8 @@
                 "id": "bf9a30df.6abc5",
                 "label": "text:bf9a30df.6abc5",
                 "type": "text",
-                "x": 689.194348206474,
-                "y": 725.2646544181977,
+                "x": 688.7202268431001,
+                "y": 717.6389413988658,
                 "text": "trump latest tweet",
                 "style": {
                     "fill": "white",
@@ -1052,7 +1052,7 @@
                     "font-weight": "normal",
                     "font-size": 30,
                     "font-style": "normal",
-                    "font-family": "impact, georgia, times, serif"
+                    "font-family": "\"Palatino Linotype\", \"Book Antiqua\", Palatino, serif"
                 }
             },
             "734b47e5.3aa8f8": {
