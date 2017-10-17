@@ -1112,15 +1112,68 @@
                 }
             }
         },
-        "mappings": [],
-        "transformers": {},
+        "mappings": [
+            {
+                "mappingId": "e3f37d9d.9503a",
+                "ttype": "transform",
+                "from": {
+                    "sourceId": "2a94594a.6562d6",
+                    "key": "sentiment",
+                    "path": [],
+                    "type": "number"
+                },
+                "to": {
+                    "path": [
+                        "feb20c43.44a3b"
+                    ],
+                    "type": "group",
+                    "property": "rotate"
+                }
+            }
+        ],
+        "transformers": {
+            "e3f37d9d.9503a": "console.log(\"sentiment\", sentiment);\nreturn `rotate(${sentiment%360})`"
+        },
         "canvasdimensions": {
             "w": 985.2631578947369,
             "h": 572
         },
-        "tree": {},
-        "x": 744,
-        "y": 415,
+        "tree": {
+            "e3f37d9d.9503a": {
+                "node": {
+                    "nid": "b62652f7.d3edf",
+                    "type": "uibuilder",
+                    "category": "processors",
+                    "color": "#002255",
+                    "unicode": "f03e"
+                },
+                "parents": [
+                    {
+                        "node": {
+                            "nid": "2a94594a.6562d6",
+                            "type": "dbfunction",
+                            "category": "processors",
+                            "color": "#002255",
+                            "unicode": "f121"
+                        },
+                        "parents": [
+                            {
+                                "node": {
+                                    "nid": "9a35d69d.adeb08",
+                                    "type": "twitter",
+                                    "category": "datastores",
+                                    "color": "#ffcc00",
+                                    "unicode": "f099"
+                                },
+                                "parents": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "x": 751,
+        "y": 452,
         "wires": [
             [
                 "3b8495a.c860f6a"
@@ -1148,8 +1201,8 @@
         "name": "",
         "appId": "webapp",
         "layout": null,
-        "x": 921,
-        "y": 415,
+        "x": 925,
+        "y": 452,
         "wires": []
     },
     {
@@ -1157,7 +1210,7 @@
         "type": "dbfunction",
         "z": "c79ee600.c17d18",
         "name": "tweet sentiment",
-        "func": "var sentiment = require(\"sentiment\");\nvar r = sentiment(msg.payload.value);\n\nreturn {\n    payload: {\n        tweet: msg.payload.value,\n        sentiment: r,\n    }\n}",
+        "func": "var sentiment = require(\"sentiment\");\nvar r = sentiment(msg.payload.value);\n\nconsole.log(\"returning\");\nconsole.log({\n        tweet: msg.payload.value,\n        sentiment: r.score,\n    });\nreturn {\n    payload: {\n        tweet: msg.payload.value,\n        sentiment: r.score,\n    }\n}",
         "outputs": 1,
         "inputtypedef": "",
         "outputtypedef": "{\n    \"name\": \"payload\",\n    \"type\": \"object\",\n    \"properties\": {\n        \"tweet\": {\"type\":\"string\"},\n        \"sentiment\": {\"type\": \"number\"}\n    }\n}",
@@ -1166,8 +1219,21 @@
         "y": 423,
         "wires": [
             [
-                "b62652f7.d3edf"
+                "b62652f7.d3edf",
+                "20725dad.6e52e2"
             ]
         ]
+    },
+    {
+        "id": "20725dad.6e52e2",
+        "type": "debugger",
+        "z": "c79ee600.c17d18",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 754,
+        "y": 340,
+        "wires": []
     }
 ]
