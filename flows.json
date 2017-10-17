@@ -189,7 +189,7 @@
             },
             "feb20c43.44a3b": {
                 "id": "feb20c43.44a3b",
-                "label": "group:feb20c43.44a3b",
+                "label": "pointer",
                 "type": "group",
                 "x": 440,
                 "y": 54,
@@ -1112,17 +1112,57 @@
                 }
             }
         },
-        "mappings": [],
+        "mappings": [
+            {
+                "mappingId": "a55f0a82.8c4c28",
+                "ttype": "transform",
+                "from": {
+                    "sourceId": "2a94594a.6562d6",
+                    "key": "sentiment",
+                    "path": [
+                        "payload"
+                    ],
+                    "type": "number"
+                },
+                "to": {
+                    "path": [
+                        "feb20c43.44a3b"
+                    ],
+                    "type": "group",
+                    "property": "rotate"
+                }
+            },
+            {
+                "mappingId": "e4fb6bc5.a56eb8",
+                "ttype": "attribute",
+                "from": {
+                    "sourceId": "2a94594a.6562d6",
+                    "key": "tweet",
+                    "path": [
+                        "payload"
+                    ],
+                    "type": "string"
+                },
+                "to": {
+                    "path": [
+                        "da73f078.9a7a2"
+                    ],
+                    "type": "text",
+                    "property": "text"
+                }
+            }
+        ],
         "transformers": {
             "e3f37d9d.9503a": "console.log(\"sentiment\", sentiment);\nreturn `rotate(${sentiment%360})`",
-            "3c523fc.722d0c": "console.log(\"ok value is\", value);\nreturn `rotate(${value%360})`"
+            "3c523fc.722d0c": "console.log(\"ok value is\", value);\nreturn `rotate(${value%360})`",
+            "a55f0a82.8c4c28": "return `rotate(${sentiment/6 * 360})`"
         },
         "canvasdimensions": {
             "w": 985.2631578947369,
             "h": 572
         },
         "tree": {
-            "e3f37d9d.9503a": {
+            "a55f0a82.8c4c28": {
                 "node": {
                     "nid": "b62652f7.d3edf",
                     "type": "uibuilder",
@@ -1154,7 +1194,7 @@
                     }
                 ]
             },
-            "3c523fc.722d0c": {
+            "e4fb6bc5.a56eb8": {
                 "node": {
                     "nid": "b62652f7.d3edf",
                     "type": "uibuilder",
@@ -1165,11 +1205,11 @@
                 "parents": [
                     {
                         "node": {
-                            "nid": "cbcd20a2.8a3ca",
-                            "type": "extract",
+                            "nid": "2a94594a.6562d6",
+                            "type": "dbfunction",
                             "category": "processors",
                             "color": "#002255",
-                            "unicode": "f0a6"
+                            "unicode": "f121"
                         },
                         "parents": [
                             {
@@ -1187,8 +1227,8 @@
                 ]
             }
         },
-        "x": 755,
-        "y": 505,
+        "x": 756,
+        "y": 515,
         "wires": [
             [
                 "3b8495a.c860f6a"
@@ -1205,8 +1245,7 @@
         "y": 420,
         "wires": [
             [
-                "2a94594a.6562d6",
-                "cbcd20a2.8a3ca"
+                "2a94594a.6562d6"
             ]
         ]
     },
@@ -1226,7 +1265,7 @@
         "type": "dbfunction",
         "z": "c79ee600.c17d18",
         "name": "tweet sentiment",
-        "func": "var sentiment = require(\"sentiment\");\nvar r = sentiment(msg.payload.value);\n\nconsole.log(\"returning\");\nconsole.log({\n        tweet: msg.payload.value,\n        sentiment: r.score,\n    });\nreturn {\n    payload: {\n        tweet: msg.payload.value,\n        sentiment: r.score,\n    }\n}",
+        "func": "var sentiment = require(\"sentiment\");\nvar r = sentiment(msg.payload.value);\n\nreturn {\n    payload: {\n        tweet: msg.payload.value,\n        sentiment: r.score,\n    }\n}",
         "outputs": 1,
         "inputtypedef": "",
         "outputtypedef": "{\n    \"name\": \"container object\",\n    \"type\": \"object\",\n    \"properties\": {\n        \"payload\": {\n            \"type\": \"object\",\n            \"properties\":{\n                \"tweet\": {\"type\":\"string\"},\n                \"sentiment\": {\"type\": \"number\"}\n            }\n        }\n    }\n}",
@@ -1251,32 +1290,5 @@
         "x": 754,
         "y": 340,
         "wires": []
-    },
-    {
-        "id": "cbcd20a2.8a3ca",
-        "type": "extract",
-        "z": "c79ee600.c17d18",
-        "name": "thetweet",
-        "filters": [
-            {
-                "source": "twitter",
-                "item": {
-                    "type": "string",
-                    "description": "a tweet",
-                    "name": "value"
-                },
-                "path": [
-                    "payload",
-                    "value"
-                ]
-            }
-        ],
-        "x": 585,
-        "y": 578,
-        "wires": [
-            [
-                "b62652f7.d3edf"
-            ]
-        ]
     }
 ]
