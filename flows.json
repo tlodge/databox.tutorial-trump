@@ -1112,44 +1112,7 @@
                 }
             }
         },
-        "mappings": [
-            {
-                "mappingId": "e3f37d9d.9503a",
-                "ttype": "transform",
-                "from": {
-                    "sourceId": "2a94594a.6562d6",
-                    "key": "sentiment",
-                    "path": [],
-                    "type": "number"
-                },
-                "to": {
-                    "path": [
-                        "feb20c43.44a3b"
-                    ],
-                    "type": "group",
-                    "property": "rotate"
-                }
-            },
-            {
-                "mappingId": "3c523fc.722d0c",
-                "ttype": "transform",
-                "from": {
-                    "sourceId": "cbcd20a2.8a3ca",
-                    "key": "value",
-                    "path": [
-                        "payload"
-                    ],
-                    "type": "string"
-                },
-                "to": {
-                    "path": [
-                        "5bc568b8.58a078"
-                    ],
-                    "type": "group",
-                    "property": "rotate"
-                }
-            }
-        ],
+        "mappings": [],
         "transformers": {
             "e3f37d9d.9503a": "console.log(\"sentiment\", sentiment);\nreturn `rotate(${sentiment%360})`",
             "3c523fc.722d0c": "console.log(\"ok value is\", value);\nreturn `rotate(${value%360})`"
