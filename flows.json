@@ -796,7 +796,8 @@
                     "stroke": "none",
                     "opacity": 1,
                     "stroke-width": 0
-                }
+                },
+                "transform": "rotate(0, 83.10994179489434, 73)"
             },
             "67fb43f1.1f01ac": {
                 "id": "67fb43f1.1f01ac",
@@ -998,6 +999,117 @@
                     "font-style": "normal",
                     "font-family": "impact, georgia, times, serif"
                 }
+            },
+            "eac835ed.7636d8": {
+                "id": "eac835ed.7636d8",
+                "label": "group:eac835ed.7636d8",
+                "type": "group",
+                "x": 236.00932711525647,
+                "y": 398.1645569620253,
+                "width": 60.729112641099995,
+                "height": 29.341051404924364,
+                "children": [
+                    "5e23fa71.b272d4"
+                ],
+                "style": {
+                    "fill": "none",
+                    "stroke": "none",
+                    "opacity": 1,
+                    "stroke-width": 0
+                }
+            },
+            "5e23fa71.b272d4": {
+                "id": "5e23fa71.b272d4",
+                "type": "group",
+                "label": "group:5e23fa71.b272d4",
+                "x": 0,
+                "y": 0,
+                "width": 60.729112641099995,
+                "height": 29.341051404924364,
+                "style": {
+                    "fill": "",
+                    "stroke": "",
+                    "stroke-width": 0,
+                    "opacity": 1
+                },
+                "children": [
+                    "7d0de109.b14d9",
+                    "47d1cbac.8e5814",
+                    "f62c9e97.0593c"
+                ]
+            },
+            "7d0de109.b14d9": {
+                "id": "7d0de109.b14d9",
+                "label": "path:7d0de109.b14d9",
+                "type": "path",
+                "d": "M 1.5277974250738107,6.496750214113875 c 0,0 38.28771459774975,4.2689437870062426 57.3957381024729,0 l 0,15.518532899849722 c -19.08580099672205,7.100646869043041 -39.2060597408941,7.636764874568947 -57.3957381024729,0 l 0,-15.518532899849722 Z",
+                "style": {
+                    "fill": "rgb(255, 255, 255)",
+                    "stroke": "rgb(255, 255, 255)",
+                    "stroke-width": "5.5px",
+                    "opacity": 1
+                }
+            },
+            "47d1cbac.8e5814": {
+                "id": "47d1cbac.8e5814",
+                "type": "ellipse",
+                "label": "ellipse:47d1cbac.8e5814",
+                "cx": 30.331501543662803,
+                "cy": 6.300636360596823,
+                "rx": 28.566477760594143,
+                "ry": 4.772838935523017,
+                "style": {
+                    "fill": "rgb(255, 255, 255)",
+                    "stroke": "rgb(255, 255, 255)",
+                    "stroke-width": "5.5px",
+                    "opacity": 1
+                }
+            },
+            "f62c9e97.0593c": {
+                "id": "f62c9e97.0593c",
+                "type": "group",
+                "label": "group:f62c9e97.0593c",
+                "x": 0,
+                "y": 0,
+                "width": 54.76403620218266,
+                "height": 25.90563868801615,
+                "style": {
+                    "fill": "",
+                    "stroke": "",
+                    "stroke-width": 0,
+                    "opacity": 1
+                },
+                "children": [
+                    "b0a0b20a.87da7",
+                    "ad0bd3e7.42af5"
+                ]
+            },
+            "b0a0b20a.87da7": {
+                "id": "b0a0b20a.87da7",
+                "label": "path:b0a0b20a.87da7",
+                "type": "path",
+                "d": "M 4.4011677096126265,8.28621767090032 c 16.71077045410733,3.287264496058817 33.86988000713631,3.1678185155530443 51.430661392284726,0 l 0,13.19628081373753 c -17.540225565247404,5.26895664705455 -34.71377974847708,5.666739540273775 -51.430661392284726,0 l 0,-11.010697151831934",
+                "style": {
+                    "fill": "rgb(190, 93, 79)",
+                    "stroke": "rgb(32, 60, 81)",
+                    "stroke-width": "5.5px",
+                    "opacity": 1
+                }
+            },
+            "ad0bd3e7.42af5": {
+                "id": "ad0bd3e7.42af5",
+                "type": "ellipse",
+                "label": "ellipse:ad0bd3e7.42af5",
+                "cx": 30.102608287079775,
+                "cy": 6.956756303518987,
+                "rx": 25.701442205092242,
+                "ry": 3.9583842376912384,
+                "style": {
+                    "fill": "rgb(240, 78, 55)",
+                    "stroke": "rgb(32, 60, 81)",
+                    "stroke-width": "5.5px",
+                    "opacity": 1
+                }
             }
         },
         "mappings": [],
@@ -1025,7 +1137,6 @@
         "y": 420,
         "wires": [
             [
-                "1196d124.1f492f",
                 "2a94594a.6562d6"
             ]
         ]
@@ -1042,46 +1153,21 @@
         "wires": []
     },
     {
-        "id": "1196d124.1f492f",
-        "type": "extract",
+        "id": "2a94594a.6562d6",
+        "type": "dbfunction",
         "z": "c79ee600.c17d18",
-        "name": "",
-        "filters": [
-            {
-                "source": "twitter",
-                "item": {
-                    "type": "string",
-                    "description": "a tweet",
-                    "name": "value"
-                },
-                "path": [
-                    "payload",
-                    "value"
-                ]
-            }
-        ],
-        "x": 571,
-        "y": 364,
+        "name": "tweet sentiment",
+        "func": "var sentiment = require(\"sentiment\");\nvar r = sentiment(msg.payload.value);\n\nreturn {\n    payload: {\n        tweet: msg.payload.value,\n        sentiment: r,\n    }\n}",
+        "outputs": 1,
+        "inputtypedef": "",
+        "outputtypedef": "{\n    \"name\": \"payload\",\n    \"type\": \"object\",\n    \"properties\": {\n        \"tweet\": {\"type\":\"string\"},\n        \"sentiment\": {\"type\": \"number\"}\n    }\n}",
+        "noerr": 0,
+        "x": 591,
+        "y": 423,
         "wires": [
             [
                 "b62652f7.d3edf"
             ]
-        ]
-    },
-    {
-        "id": "2a94594a.6562d6",
-        "type": "dbfunction",
-        "z": "c79ee600.c17d18",
-        "name": "",
-        "func": "return msg;",
-        "outputs": 1,
-        "inputtypedef": "",
-        "outputtypedef": "",
-        "noerr": 0,
-        "x": 571,
-        "y": 498,
-        "wires": [
-            []
         ]
     }
 ]
