@@ -7,10 +7,10 @@
     "licence": "MIT",
     "databox-type": "app",
     "tags": "",
-    "homepage": "https://github.com/tlodge/databox.trumpdoomsday",
+    "homepage": "https://github.com/tlodge/databox.tutorial-trump",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/tlodge/databox.trumpdoomsday.git"
+        "url": "git+https://github.com/tlodge/databox.tutorial-trump.git"
     },
     "packages": [
         {
