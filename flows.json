@@ -68,7 +68,7 @@
         "templatesById": {
             "79018062.5d533": {
                 "id": "79018062.5d533",
-                "label": "group:79018062.5d533",
+                "label": "background",
                 "type": "group",
                 "x": -3.0018903591682147,
                 "y": -4.948960302457408,
@@ -231,7 +231,7 @@
             },
             "2f83a267.196a6e": {
                 "id": "2f83a267.196a6e",
-                "label": "circle:2f83a267.196a6e",
+                "label": "backbluecircle",
                 "type": "circle",
                 "cx": 689.9660542432194,
                 "cy": 345.69973753280834,
@@ -245,7 +245,7 @@
             },
             "f9912491.dafba8": {
                 "id": "f9912491.dafba8",
-                "label": "group:f9912491.dafba8",
+                "label": "pointer",
                 "type": "group",
                 "x": 606.1571303587051,
                 "y": 9.25473315835518,
@@ -445,7 +445,7 @@
             },
             "3860dd27.bfa842": {
                 "id": "3860dd27.bfa842",
-                "label": "circle:3860dd27.bfa842",
+                "label": "white circle",
                 "type": "circle",
                 "cx": 689.1001890359169,
                 "cy": 345.75803402646505,
@@ -459,7 +459,7 @@
             },
             "ae9bfc19.b95b3": {
                 "id": "ae9bfc19.b95b3",
-                "label": "group:ae9bfc19.b95b3",
+                "label": "trump",
                 "type": "group",
                 "x": 552.5243744531932,
                 "y": 152.28369203849513,
@@ -838,7 +838,7 @@
             },
             "222282b8.b7396e": {
                 "id": "222282b8.b7396e",
-                "label": "group:222282b8.b7396e",
+                "label": "trump arm",
                 "type": "group",
                 "x": 383.42521916411823,
                 "y": 398.73304791029557,
@@ -1021,7 +1021,7 @@
             },
             "74915d2e.9a5fb4": {
                 "id": "74915d2e.9a5fb4",
-                "label": "rect:74915d2e.9a5fb4",
+                "label": "textgreenback",
                 "type": "rect",
                 "x": -9.244864391951182,
                 "y": 649.4052668416447,
@@ -1038,7 +1038,7 @@
             },
             "bf9a30df.6abc5": {
                 "id": "bf9a30df.6abc5",
-                "label": "text:bf9a30df.6abc5",
+                "label": "tweet",
                 "type": "text",
                 "x": 688.7202268431001,
                 "y": 717.6389413988658,
@@ -1057,7 +1057,7 @@
             },
             "734b47e5.3aa8f8": {
                 "id": "734b47e5.3aa8f8",
-                "label": "group:734b47e5.3aa8f8",
+                "label": "button",
                 "type": "group",
                 "x": 358.79154855643037,
                 "y": 572.3250393700787,
