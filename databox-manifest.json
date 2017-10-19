@@ -1,12 +1,15 @@
 {
     "manifest-version": 1,
-    "name": "tlodge-",
+    "name": "tlodge-trump-clock",
     "version": "0.1.0",
-    "description": "",
+    "description": "testing twitter driver",
     "author": "tlodge",
     "licence": "MIT",
     "databox-type": "app",
-    "tags": "",
+    "tags": [
+        "twitter",
+        "tweet"
+    ],
     "homepage": "https://github.com/tlodge/databox.tutorial-trump",
     "repository": {
         "type": "git",
@@ -16,12 +19,12 @@
         {
             "id": "c79ee600.c17d18",
             "name": "new package",
-            "purpose": "",
+            "purpose": "to test twitter",
             "required": false,
             "datastores": [
                 "9a35d69d.adeb08"
             ],
-            "benefits": ""
+            "benefits": "to test twitter"
         }
     ],
     "allowed-combinations": [],
