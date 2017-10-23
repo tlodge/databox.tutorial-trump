@@ -247,8 +247,8 @@
                 "id": "f9912491.dafba8",
                 "label": "pointer",
                 "type": "group",
-                "x": 606.1571303587051,
-                "y": 9.25473315835518,
+                "x": 606.2398815399803,
+                "y": 10.810463968410659,
                 "width": 161.9934604484588,
                 "height": 670.2619167864323,
                 "children": [
@@ -1238,8 +1238,8 @@
             }
         ],
         "transformers": {
-            "3d3a39ba.9cc6b6": "return `rotate(${sentiment/10*360})`",
-            "d2035481.b7e228": "console.log(sentiment);\nreturn `rotate(${37-(sentiment/10*37)})`"
+            "3d3a39ba.9cc6b6": "return `rotate(${sentiment*360})`",
+            "d2035481.b7e228": "return `rotate(${37-(sentiment*37)})`"
         },
         "canvasdimensions": {
             "w": 1348,
