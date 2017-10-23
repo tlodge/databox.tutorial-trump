@@ -34,13 +34,13 @@
         "type": "dbfunction",
         "z": "c79ee600.c17d18",
         "name": "tweet sentiment",
-        "func": "var sentiment = require(\"sentiment\");\nvar r = sentiment(msg.payload.value);\n//r.comparative is between -5 and 5, so convert o scale 0-10 (where 0 is most negative)\n\nvar score = (r.comparative * -1) + 5;\n\nreturn {\n    payload: {\n        tweet: msg.payload.value,\n        sentiment: score,\n    }\n}",
+        "func": "var sentiment = require(\"sentiment\");\nvar r = sentiment(msg.payload.value);\n//r.comparative is between -1 and 1, flip it so -1=happy and 1=sad, then shift by 1 so 0=happy,2=sad\nconsole.log(`${msg.payload.value} score: ${r.score} comparitive:${(1 + (-1*r.comparative))/2}`)\n\nvar score = (1 + (-1*r.comparative))/2;\n\nreturn {\n    payload: {\n        tweet: msg.payload.value,\n        sentiment: score,\n    }\n}",
         "outputs": 1,
         "inputtypedef": "",
         "outputtypedef": "{\n    \"name\": \"container object\",\n    \"type\": \"object\",\n    \"properties\": {\n        \"payload\": {\n            \"type\": \"object\",\n            \"properties\":{\n                \"tweet\": {\"type\":\"string\"},\n                \"sentiment\": {\"type\": \"number\"}\n            }\n        }\n    }\n}",
         "noerr": 0,
-        "x": 591,
-        "y": 423,
+        "x": 596,
+        "y": 432,
         "wires": [
             [
                 "20725dad.6e52e2",
@@ -1239,7 +1239,7 @@
         ],
         "transformers": {
             "3d3a39ba.9cc6b6": "return `rotate(${sentiment/10*360})`",
-            "d2035481.b7e228": "return `rotate(${37-(sentiment/10*37)})`"
+            "d2035481.b7e228": "console.log(sentiment);\nreturn `rotate(${37-(sentiment/10*37)})`"
         },
         "canvasdimensions": {
             "w": 1348,
